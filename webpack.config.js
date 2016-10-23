@@ -2,7 +2,7 @@ var webpack = require('webpack');
 module.exports = {  
   entry: [
     'webpack/hot/only-dev-server',
-    "./js/app.js"
+    "./app/index.js"
   ],
   output: {
     path: __dirname + '/build',
@@ -21,6 +21,6 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin()
-  ]
-
+  ],
+  devtool: 'cheap-source-map'
 };
