@@ -4,6 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
 
+
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={App}/>

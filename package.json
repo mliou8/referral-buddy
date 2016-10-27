@@ -28,5 +28,9 @@
     "react-router": "^2.8.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "muicss": "^0.9.3",
+    "react-bootstrap": "^0.30.5"
   }
 }
