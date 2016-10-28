@@ -1,8 +1,7 @@
 import React from 'react'
 import {form, FormControl, FormGroup, ControlLabel, HelpBlock  } from 'react-bootstrap'
 
-class SignUp extends React.Component {
-  
+export default class SignUp extends React.Component {
   //  FieldGroup({ id, label, help, ...props }) {
   //   return (
   //     <FormGroup controlId={id}>
@@ -12,18 +11,11 @@ class SignUp extends React.Component {
   //     </FormGroup>
   //   );
   // }
-  let variabel = 6;
   render() {
     return (
       <div>
         <form>
-        <FieldGroup
-          id="formControlsText"
-          type="text"
-          label="Text"
-          placeholder="Enter text"
-          />
-        
+       
           <button type="submit">
             Submit
           </button>
@@ -33,4 +25,3 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp
