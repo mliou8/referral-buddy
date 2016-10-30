@@ -4,8 +4,8 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './app';
 import Home from './home';
 import Dashboard from './dashboard';
-
-import SignUp from './components/signup';
+import SignUp from './components/Signup';
+import jobListPage from './components/JobsListPage';
 
 if (module.hot) module.hot.accept();
 
@@ -14,6 +14,7 @@ const routes = (
     <IndexRoute component={Home}/>
     <Route path="/signup" component={SignUp}/>
     <Route path="/dashboard" component={Dashboard}/>
+    <Route path="/jobs" component={jobListPage}/>
   </Route>
 );
 
