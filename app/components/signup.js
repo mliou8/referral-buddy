@@ -1,5 +1,4 @@
 import React from 'react';
-// import { createUser } from '../actions/index'
 
 export default class SignUp extends React.Component {
   onSubmit(e) {
@@ -10,13 +9,14 @@ export default class SignUp extends React.Component {
     return (
       <div className="container">
         <div className="col-md-6">
-          <form>
+          <div className="input-group">
             <input type="text" className="form-control" placeholder="First Name" label="Firstname"/>
             <input type="text" className="form-control" placeholder="Last Name"/>
             <input type="email" className="form-control" placeholder="Email" label="Email"/>
             <input type="password" className="form-control" placeholder="Password" label="Password"/>
             <input type="password" className="form-control" placeholder="Confirm Password" label="ConfirmPassword"/>
-            <div className="input-group">
+          </div>  
+          <div className="input-group">
               <p>
                 Jobs I'm Interested In:
               </p>
@@ -36,9 +36,8 @@ export default class SignUp extends React.Component {
                 Submit
               </button>
             </div>
-            </form>
+          </div>
         </div>
-      </div>
-    );
-  }
-}
+      )
+      }
+    }
