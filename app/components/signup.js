@@ -1,46 +1,44 @@
-import React from 'react'
-import {form, FormControl, FormGroup, ControlLabel, HelpBlock  } from 'react-bootstrap'
+import React from 'react';
+// import { createUser } from '../actions/index'
 
 export default class SignUp extends React.Component {
-  
-  //  FieldGroup({ id, label, help, ...props }) {
-  //   return (
-  //     <FormGroup controlId={id}>
-  //       <ControlLabel>{label}</ControlLabel>
-  //       <FormControl {...props} />
-  //       {help && <HelpBlock>{help}</HelpBlock>}
-  //     </FormGroup>
-  //   );
-  // }
-  
+  onSubmit(e) {
+    e.preventDefault();
+    console.log("yay")
+  }
   render() {
     return (
-      <div className = "container">
-        <div className = "col-md-6">
-          <div className="input-group">
-            <span className="input-group-addon" id="basic-addon1">
-            </span>
+      <div className="container">
+        <div className="col-md-6">
+          <form>
             <input type="text" className="form-control" placeholder="First Name" label="Firstname"/>
             <input type="text" className="form-control" placeholder="Last Name"/>
             <input type="email" className="form-control" placeholder="Email" label="Email"/>
-            
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="input-group">
-                  <span className="input-group-addon">
-                    <input type="checkbox"/>
-                    </span>
-                    <input type="text" className="form-control"/>
-                    </div>
-                  </div> 
-                </div>
-                <button type="submit">
-                  Submit
-                </button>
-              </div>    
+            <input type="password" className="form-control" placeholder="Password" label="Password"/>
+            <input type="password" className="form-control" placeholder="Confirm Password" label="ConfirmPassword"/>
+            <div className="input-group">
+              <p>
+                Jobs I'm Interested In:
+              </p>
+              <span className="input-group">
+                <input type="checkbox" name="FrontEnd"/>
+                <label htmlFor="FrontEnd">Front End</label>
+              </span>
+              <span className="input-group">
+                <input type="checkbox" name="BackEnd"/>
+                <label htmlFor="BackEnd">Back End</label>
+              </span>
+              <span className="input-group">
+                <input type="checkbox" name="FullStack"/>
+                <label htmlFor="FullStack">Full Stack</label>
+              </span>
+              <button type="submit" onClick={this.onSubmit}>
+                Submit
+              </button>
             </div>
-          </div>
-        );
-      }
-    }
-    
+            </form>
+        </div>
+      </div>
+    );
+  }
+}

@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './app';
 import Home from './home';
-import SignUp from './components/Signup';
-import jobListPage from './components/JobsListPage';
+import Dashboard from './components/dashboard';
+import SignUp from './components/signup';
+import JobListPage from './components/jobsListPage';
 
 if (module.hot) module.hot.accept();
 
@@ -12,7 +13,8 @@ const routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Home}/>
     <Route path="/signup" component={SignUp}/>
-    <Route path="/jobs" component={jobListPage}/>
+    <Route path="/dashboard" component={Dashboard}/>
+    <Route path="/jobs" component={JobListPage}/>
   </Route>
 );
 
