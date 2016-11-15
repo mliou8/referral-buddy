@@ -3,14 +3,13 @@ import React from 'react';
 export default class SignUp extends React.Component {
   onSubmit(e) {
     e.preventDefault();
-    console.log("yay")
   }
   render() {
     return (
       <div className="container">
         <div className="col-md-6">
           <div className="input-group">
-            <input type="text" className="form-control" placeholder="First Name" label="Firstname"/>
+            <input type="text" className="form-control" placeholder="This is a Name" label="Firstname"/>
             <input type="text" className="form-control" placeholder="Last Name"/>
             <input type="email" className="form-control" placeholder="Email" label="Email"/>
             <input type="password" className="form-control" placeholder="Password" label="Password"/>

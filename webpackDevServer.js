@@ -22,6 +22,7 @@ module.exports = () => {
   let devServer = new WebpackDevServer(compiler, {
     publicPath: config.output.publicPath,
     hot: true,
+    inline: true,
     historyApiFallback: true,
     quiet: false,
     stats: {
