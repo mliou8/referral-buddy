@@ -7,7 +7,7 @@ import Dashboard from './components/dashboard';
 import SignUp from './components/signup';
 import JobListPage from './components/jobsListPage';
 
-if (module.hot) module.hot.accept();
+// if (module.hot) module.hot.accept();
 
 const routes = (
   <Route path="/" component={App}>
