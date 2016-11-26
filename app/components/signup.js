@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SignUp extends React.Component {
+export default class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
@@ -10,8 +10,10 @@ export default class SignUp extends React.Component {
   }
   handleChange(event) {
     this.setState({value: event.target.value});
+    console.log("the current state is ", this.state);
   }
-  onSubmit(e) {
+  handleSubmit(e) {
+    alert('A name was submitted: ' + this.state.value);
     e.preventDefault();
   }
   render() {
@@ -19,8 +21,8 @@ export default class SignUp extends React.Component {
       <div className="container">
         <div className="col-md-6">
           <div className="input-group">
-            <input type="text" className="form-control" placeholder="This is a Name" label="Firstname" value={this.state.value}/>
-            <input type="text" className="form-control" placeholder="Last Name"/>
+            <input type="text" className="form-control" placeholder="First Name" label="Firstname"/>
+            <input type="text" className="form-control" placeholder="Last Name" value={this.state.value}/>
             <input type="email" className="form-control" placeholder="Email" label="Email"/>
             <input type="password" className="form-control" placeholder="Password" label="Password"/>
             <input type="password" className="form-control" placeholder="Confirm Password" label="ConfirmPassword"/>
@@ -41,7 +43,7 @@ export default class SignUp extends React.Component {
                 <input type="checkbox" name="FullStack"/>
                 <label htmlFor="FullStack">Full Stack</label>
               </span>
-              <button type="submit" onClick={this.onSubmit}>
+              <button type="submit" onClick={this.handleSubmit}>
                 Submit
               </button>
             </div>
