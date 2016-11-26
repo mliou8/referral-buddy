@@ -1,6 +1,16 @@
 import React from 'react';
 
 export default class SignUp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
   onSubmit(e) {
     e.preventDefault();
   }
@@ -9,7 +19,7 @@ export default class SignUp extends React.Component {
       <div className="container">
         <div className="col-md-6">
           <div className="input-group">
-            <input type="text" className="form-control" placeholder="This is a Name" label="Firstname"/>
+            <input type="text" className="form-control" placeholder="This is a Name" label="Firstname" value={this.state.value}/>
             <input type="text" className="form-control" placeholder="Last Name"/>
             <input type="email" className="form-control" placeholder="Email" label="Email"/>
             <input type="password" className="form-control" placeholder="Password" label="Password"/>
@@ -17,7 +27,7 @@ export default class SignUp extends React.Component {
           </div>  
           <div className="input-group">
               <p>
-                Jobs I'm Interested In:
+                Positions I'm Interested In:
               </p>
               <span className="input-group">
                 <input type="checkbox" name="FrontEnd"/>
